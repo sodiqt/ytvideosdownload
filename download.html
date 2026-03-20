@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Preparing Download...</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #020617;
+      color: white;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    .box {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    h2 {
+      color: #38bdf8;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #22c55e;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- ===================== -->
+  <!-- 🔥 POP ADS CODE HERE -->
+  <!-- PASTE YOUR ADSTERRA / MONETAG SCRIPT BELOW -->
+  <!-- ===================== -->
+
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>Preparing Your Download Link...</h2>
+    <p>Please wait while we verify your request.</p>
+
+    <p id="countdown">Redirecting in 5 seconds...</p>
+
+    <button onclick="goNow()">Click here if not redirected</button>
+  </div>
+
+  <script>
+    let timeLeft = 5;
+
+    let timer = setInterval(function () {
+      timeLeft--;
+      document.getElementById("countdown").innerText =
+        "Redirecting in " + timeLeft + " seconds...";
+
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        goNow();
+      }
+    }, 1000);
+
+    function goNow() {
+      // 🔗 PUT YOUR REAL DOWNLOAD WEBSITE LINK HERE
+      window.location.href = "https://en1.savefrom.net/1-youtube-video-downloader-13sg/";
+    }
+  </script>
+
+</body>
+</html>

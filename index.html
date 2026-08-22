@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jEGPlCtu4ZaLIjFs97MaFrT2sNPIXAQhuw9y_Mj4VRs" />
+<title>YouTube Video Downloader — Save YouTube Videos in MP4 & HD Free | ytvideosdownload</title>
+<meta name="description" content="Download YouTube videos free in MP4, 1080p, 4K or MP3. No app, no sign-up, works on any phone or computer. Paste a link and save your video in seconds.">
+<link rel="canonical" href="https://ytvideosdownload.netlify.app/">
+<meta property="og:title" content="YouTube Video Downloader — Free MP4 & HD Downloads">
+<meta property="og:description" content="Paste any YouTube link and download the video in MP4, HD or MP3 — free, no sign-up, no app required.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is it legal to download YouTube videos?","acceptedAnswer":{"@type":"Answer","text":"Downloading a video for personal, offline viewing is generally fine, but the video itself stays subject to its creator's copyright. Re-uploading, redistributing, or monetizing someone else's video without permission is what gets people into trouble — not the act of saving a personal copy."}},
+    {"@type":"Question","name":"What video formats and resolutions can I download?","acceptedAnswer":{"@type":"Answer","text":"Most videos are available in MP4 at 360p, 480p, 720p, 1080p and, where the original upload supports it, 1440p or 4K. You can also extract just the audio as an MP3 file."}},
+    {"@type":"Question","name":"Do I need to install an app?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your mobile or desktop browser. There's nothing to install and no account to create."}},
+    {"@type":"Question","name":"Can I download YouTube Shorts and playlists?","acceptedAnswer":{"@type":"Answer","text":"Yes. Shorts work exactly like regular videos — paste the link and choose your format. Playlists can be downloaded video by video using each video's individual URL."}},
+    {"@type":"Question","name":"Why did my download fail or come out with no sound?","acceptedAnswer":{"@type":"Answer","text":"This usually means the source link was copied incorrectly, the video is private or age-restricted, or the selected quality wasn't available for that upload. Copy the link again directly from the YouTube share button and try a lower resolution."}},
+    {"@type":"Question","name":"Will downloading affect the video quality?","acceptedAnswer":{"@type":"Answer","text":"No. The file you download is pulled directly from the resolution YouTube already encoded, so picking 1080p gives you the same 1080p quality you'd see streaming it."}},
+    {"@type":"Question","name":"Does this work on iPhone and Android?","acceptedAnswer":{"@type":"Answer","text":"Yes, it works in Safari, Chrome, and most mobile browsers on both iOS and Android, as well as Windows, Mac, and Linux desktops."}}
+  ]
+}
+</script>
+<!-- Pop/interstitial ad script -->
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var h=window,c="e67ec1c56e138ca9e8c3a35b8b654da7",m=[["siteId",32+819-671*107+5357266],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],b=["d3d3LmNkbjRhZHMuY29tL3N6ZFZYL29EdS9sY29yZS5qcw==","ZDNnNW92Zm5nanc5YncuY2xvdWRmcm9udC5uZXQvdWluay1hbGwubWluLmpz"],x=-1,d,z,v=function(){clearTimeout(z);x++;if(b[x]&&!(1813329972000<(new Date).getTime()&&1<x)){d=h.document.createElement("script");d.type="text/javascript";d.async=!0;var a=h.document.getElementsByTagName("script")[0];d.src="https://"+atob(b[x]);d.crossOrigin="anonymous";d.onerror=v;d.onload=function(){clearTimeout(z);h[c.slice(0,16)+c.slice(0,16)]||v()};z=setTimeout(v,5E3);a.parentNode.insertBefore(d,a)}};if(!h[c]){try{Object.freeze(h[c]=m)}catch(e){}v()}})();
+/*]]>/* */
+</script>
+
+</head>
+<body data-platform="youtube">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="brand-mark"></span>ytvideosdownload</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">YouTube</a></li>
+      <li><a href="facebook-video-downloader.html">Facebook</a></li>
+      <li><a href="instagram-video-downloader.html">Instagram</a></li>
+      <li><a href="tiktok-video-downloader.html">TikTok</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Free · No sign-up · No app install</div>
+      <h1>Download YouTube videos in seconds</h1>
+      <p class="lede">Paste a link, pick your format, and save any public YouTube video straight to your phone or computer — in MP4, HD, or as an MP3, without installing anything.</p>
+      <div class="hero-cta">
+        <a href="#grab" class="btn btn-primary">Download Your Video Now</a>
+        <a href="#how" class="btn btn-ghost">How it works</a>
+      </div>
+      <div class="trust-row">
+        <span><b>Up to 4K</b> resolution</span>
+        <span><b>MP4 & MP3</b> output</span>
+        <span><b>Any device</b>, any browser</span>
+      </div>
+    </div>
+    <div class="grab-card" id="grab">
+      <div class="label">Paste YouTube link</div>
+
+      <div class="grab-state active" data-state="idle">
+        <form data-grab-form data-platform="youtube">
+          <div class="grab-input-row">
+            <input type="text" placeholder="https://youtube.com/watch?v=...">
+          </div>
+          <div class="format-chips">
+            <span class="chip active">MP4 · 1080p</span>
+            <span class="chip">MP4 · 720p</span>
+            <span class="chip">MP3 · Audio</span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:16px;">Download Your Video Now</button>
+        </form>
+      </div>
+
+      <div class="grab-state" data-state="processing">
+        <div class="progress-status"><span class="dot-pulse"></span><span class="status-text">Fetching video info…</span></div>
+        <div class="progress-track"><div class="progress-fill"></div></div>
+      </div>
+
+      <div class="grab-state" data-state="ready">
+        <div class="ready-state">
+          <div class="ready-icon">✓</div>
+          <h3 style="margin-bottom:6px;">Your video is ready</h3>
+          <div class="ready-meta"><span><b>MP4</b></span><span><b>1080p</b></span><span><b>Ready</b></span></div>
+          <button class="btn btn-primary btn-block" data-final-download>Click Here to Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="block" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Process</div>
+      <h2>How to download a YouTube video</h2>
+      <p>Three steps, no technical know-how required.</p>
+    </div>
+    <div class="tickets">
+      <div class="ticket">
+        <div class="step-no">STEP 01</div>
+        <h3>Copy the link</h3>
+        <div class="tear"></div>
+        <p>Open the video on YouTube, tap Share, and copy the URL. On desktop, just copy it straight from the address bar.</p>
+      </div>
+      <div class="ticket">
+        <div class="step-no">STEP 02</div>
+        <h3>Paste & choose format</h3>
+        <div class="tear"></div>
+        <p>Drop the link into the box above and pick MP4 resolution or MP3 if you only need the audio.</p>
+      </div>
+      <div class="ticket">
+        <div class="step-no">STEP 03</div>
+        <h3>Download instantly</h3>
+        <div class="tear"></div>
+        <p>Hit download — your file starts saving to your device in seconds, ready to watch offline anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why this tool</div>
+      <h2>Built for speed, not friction</h2>
+      <p>A lot of YouTube downloaders bury the download button under pop-ups and fake buttons. This one doesn't.</p>
+    </div>
+    <div class="grid-3">
+      <div class="feature-card">
+        <div class="ico">01</div>
+        <h3>Fast processing</h3>
+        <p>Links are resolved and ready to save within a few seconds, even for longer videos.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico">02</div>
+        <h3>Real HD & 4K</h3>
+        <p>Download in the same resolution the video was uploaded in — 720p, 1080p, 1440p, or 4K where available.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico">03</div>
+        <h3>No account needed</h3>
+        <p>Nothing to sign up for, no email required, no software to install on your phone or PC.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico">04</div>
+        <h3>Audio-only mode</h3>
+        <p>Just need the sound? Extract MP3 audio from any video — handy for music, podcasts, or lectures.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico">05</div>
+        <h3>Works everywhere</h3>
+        <p>Android, iPhone, iPad, Windows, Mac, and Linux — anything with a modern browser works.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico">06</div>
+        <h3>Shorts supported</h3>
+        <p>YouTube Shorts download exactly the same way as regular videos — just paste the Shorts link.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Specs</div>
+      <h2>Supported formats & content types</h2>
+    </div>
+    <table class="spec-table">
+      <tr><th>Content type</th><th>Supported</th><th>Notes</th></tr>
+      <tr><td>Standard videos</td><td>Yes</td><td>Any public upload, any length</td></tr>
+      <tr><td>YouTube Shorts</td><td>Yes</td><td>Paste the Shorts URL directly</td></tr>
+      <tr><td>Playlists</td><td>Yes, per video</td><td>Download each video's link individually</td></tr>
+      <tr><td>Audio (MP3)</td><td>Yes</td><td>Strips video, keeps audio track only</td></tr>
+      <tr><td>Live streams (ongoing)</td><td>No</td><td>Available once the stream has ended and is published as a video</td></tr>
+      <tr><td>Private / unlisted videos</td><td>Limited</td><td>Unlisted links work if you have the URL; private videos don't</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Good to know</div>
+      <h2>Getting the best result</h2>
+    </div>
+    <div class="grid-2">
+      <div class="feature-card">
+        <h3>Copy the link from the source</h3>
+        <p>Always grab the URL from YouTube's own Share button rather than a browser tab that's mid-redirect — it avoids broken or expired links.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Pick a resolution that matches your need</h3>
+        <p>1080p is the sweet spot for phones and most viewing. Go 4K only if you're saving for a bigger screen — the file size scales up fast.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Check your storage first</h3>
+        <p>A 10-minute 1080p video is typically 150–300MB. Longer or higher-resolution videos can run into the gigabytes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Downloads are for offline personal use</h3>
+        <p>Saved videos are meant for you to watch without an internet connection — not for re-uploading elsewhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap">
+    <div class="callout">
+      <strong>A quick note on copyright:</strong> saving a video for personal, offline viewing is generally fine, but the content still belongs to its creator. Don't re-upload, resell, or publicly redistribute anything you download without permission.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div>
+      <details class="faq-item" open>
+        <summary>Is it legal to download YouTube videos?</summary>
+        <div class="faq-a">Downloading a video for personal, offline viewing is generally fine, but the video itself stays subject to its creator's copyright. Re-uploading, redistributing, or monetizing someone else's video without permission is what gets people into trouble — not the act of saving a personal copy.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What video formats and resolutions can I download?</summary>
+        <div class="faq-a">Most videos are available in MP4 at 360p, 480p, 720p, 1080p and, where the original upload supports it, 1440p or 4K. You can also extract just the audio as an MP3 file.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to install an app?</summary>
+        <div class="faq-a">No. Everything runs in your mobile or desktop browser. There's nothing to install and no account to create.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I download YouTube Shorts and playlists?</summary>
+        <div class="faq-a">Yes. Shorts work exactly like regular videos — paste the link and choose your format. Playlists can be downloaded video by video using each video's individual URL.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Why did my download fail or come out with no sound?</summary>
+        <div class="faq-a">This usually means the source link was copied incorrectly, the video is private or age-restricted, or the selected quality wasn't available for that upload. Copy the link again directly from the YouTube share button and try a lower resolution.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Will downloading affect the video quality?</summary>
+        <div class="faq-a">No. The file you download is pulled directly from the resolution YouTube already encoded, so picking 1080p gives you the same 1080p quality you'd see streaming it.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Does this work on iPhone and Android?</summary>
+        <div class="faq-a">Yes, it works in Safari, Chrome, and most mobile browsers on both iOS and Android, as well as Windows, Mac, and Linux desktops.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">More tools</div>
+      <h2>Download from other platforms</h2>
+    </div>
+    <div class="platform-grid">
+      <a href="index.html" class="platform-card"><span class="dot" style="background:#ff4d4d"></span><h3>YouTube</h3><span>MP4 · MP3 · up to 4K</span></a>
+      <a href="facebook-video-downloader.html" class="platform-card"><span class="dot" style="background:#4c8dff"></span><h3>Facebook</h3><span>Videos & Reels · MP4</span></a>
+      <a href="instagram-video-downloader.html" class="platform-card"><span class="dot" style="background:#c74eff"></span><h3>Instagram</h3><span>Reels, Posts & Stories</span></a>
+      <a href="tiktok-video-downloader.html" class="platform-card"><span class="dot" style="background:#34e4c0"></span><h3>TikTok</h3><span>No watermark · MP4</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap" style="text-align:center;">
+    <h2>Ready to save your video?</h2>
+    <p style="max-width:46ch; margin:0 auto 22px;">Paste your YouTube link above and get a downloadable file in seconds — completely free.</p>
+    <a href="#grab" class="btn btn-primary">Download Your Video Now</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-mark"></span>ytvideosdownload</a>
+        <p style="margin-top:12px; max-width:32ch;">A fast, free way to save videos from YouTube, Facebook, Instagram and TikTok for offline viewing.</p>
+      </div>
+      <div>
+        <h4>Downloaders</h4>
+        <ul>
+          <li><a href="index.html">YouTube</a></li>
+          <li><a href="facebook-video-downloader.html">Facebook</a></li>
+          <li><a href="instagram-video-downloader.html">Instagram</a></li>
+          <li><a href="tiktok-video-downloader.html">TikTok</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#how">How it works</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ytvideosdownload. All rights reserved.</span>
+      <span>Not affiliated with YouTube, Google, Meta, or TikTok.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

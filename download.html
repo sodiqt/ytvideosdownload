@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Preparing Your Download — ytvideosdownload</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  body{ display:flex; align-items:center; justify-content:center; min-height:100vh; padding:24px; }
+  .redirect-card{
+    background:var(--bg-elev); border:1px solid var(--line); border-radius:var(--radius);
+    padding:40px 34px; max-width:420px; width:100%; text-align:center; box-shadow:var(--shadow);
+  }
+  .spinner{
+    width:52px; height:52px; margin:0 auto 22px; border-radius:50%;
+    border:3px solid var(--line-strong); border-top-color:var(--accent);
+    animation:spin 0.9s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .redirect-card h1{ font-size:1.3rem; margin-bottom:8px; }
+  .redirect-card p{ font-size:.92rem; }
+  #countdown{ font-family:var(--font-mono); color:var(--accent); font-size:.85rem; margin-bottom:20px; }
+  .ad-slot{ margin:22px 0; min-height:0; }
+</style>
+</head>
+<body data-platform="youtube">
+
+  <div class="redirect-card">
+    <div class="spinner" aria-hidden="true"></div>
+    <h1>Preparing your download</h1>
+    <p>Verifying your request and picking the fastest available server. This only takes a moment.</p>
+    <p id="countdown">Redirecting in 5 seconds…</p>
+
+    <div class="ad-slot" id="ad-slot">
+      <script type="text/javascript" data-cfasync="false">
+      /*<![CDATA[/* */
+      (function(){var h=window,c="e67ec1c56e138ca9e8c3a35b8b654da7",m=[["siteId",32+819-671*107+5357266],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],b=["d3d3LmNkbjRhZHMuY29tL3N6ZFZYL29EdS9sY29yZS5qcw==","ZDNnNW92Zm5nanc5YncuY2xvdWRmcm9udC5uZXQvdWluay1hbGwubWluLmpz"],x=-1,d,z,v=function(){clearTimeout(z);x++;if(b[x]&&!(1813329972000<(new Date).getTime()&&1<x)){d=h.document.createElement("script");d.type="text/javascript";d.async=!0;var a=h.document.getElementsByTagName("script")[0];d.src="https://"+atob(b[x]);d.crossOrigin="anonymous";d.onerror=v;d.onload=function(){clearTimeout(z);h[c.slice(0,16)+c.slice(0,16)]||v()};z=setTimeout(v,5E3);a.parentNode.insertBefore(d,a)}};if(!h[c]){try{Object.freeze(h[c]=m)}catch(e){}v()}})();
+      /*]]>/* */
+      </script>
+    </div>
+
+    <button class="btn btn-primary btn-block" onclick="goNow()">Continue now</button>
+  </div>
+
+  <script>
+    // ============================================================
+    // DESTINATION MAP
+    // All platforms currently route to the same SaveFrom tool, which
+    // handles YouTube, Facebook, and Instagram downloads itself.
+    // If you later get a dedicated TikTok tool link, swap it in below.
+    // ============================================================
+    var DESTINATIONS = {
+      youtube:   "https://en1.savefrom.net/1-youtube-video-downloader-13sg/",
+      facebook:  "https://en1.savefrom.net/1-youtube-video-downloader-13sg/",
+      instagram: "https://en1.savefrom.net/1-youtube-video-downloader-13sg/",
+      tiktok:    "https://en1.savefrom.net/1-youtube-video-downloader-13sg/"
+    };
+
+    var params = new URLSearchParams(window.location.search);
+    var source = (params.get('to') || 'youtube').toLowerCase();
+    var pastedUrl = params.get('url') || '';
+    document.body.setAttribute('data-platform', DESTINATIONS[source] ? source : 'youtube');
+
+    var target = DESTINATIONS[source] || DESTINATIONS.youtube;
+    // If we captured the video URL the visitor pasted, forward it as a query param
+    // (most destination tools accept ?url= — remove this if yours doesn't).
+    var finalUrl = pastedUrl ? target + (target.indexOf('?') > -1 ? '&' : '?') + 'url=' + pastedUrl : target;
+
+    var timeLeft = 5;
+    var countdownEl = document.getElementById('countdown');
+    var timer = setInterval(function () {
+      timeLeft--;
+      countdownEl.textContent = timeLeft > 0 ? "Redirecting in " + timeLeft + " seconds…" : "Redirecting…";
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        goNow();
+      }
+    }, 1000);
+
+    function goNow() {
+      window.location.href = finalUrl;
+    }
+  </script>
+</body>
+</html>
